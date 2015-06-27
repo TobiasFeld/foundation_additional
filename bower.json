@@ -17,5 +17,9 @@
   "homepage": "https://github.com/monkey-tobi/foundation_additional",
   "moduleType": [
     "globals"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/monkey-tobi/foundation_additional.git"
+  }
 }
