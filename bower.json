@@ -13,5 +13,9 @@
   "authors": [
     "Tobias Talented Monkeys <tobias@talented-monkeys.com>"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/monkey-tobi/foundation_additional",
+  "moduleType": [
+    "globals"
+  ]
 }
