@@ -1,6 +1,6 @@
 {
   "name": "foundation-additional",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adding more Media Queries from Foundation Framework and some more utility classes",
   "main": [
     "_more_media_queries.scss",
