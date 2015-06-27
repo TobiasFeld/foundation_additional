@@ -1,0 +1,28 @@
+{
+  "name": "foundation-additional",
+  "version": "1.0.0",
+  "description": "Adding more Media Queries from Foundation Framework and some more utility classes",
+  "main": [
+    "_more_media_queries.scss",
+    "_utility_classes.scss"
+  ],
+  "dependencies": {
+    "foundation": "5.5.2"
+  },
+  "keywords": [
+    "foundation",
+    "monkey-theme"
+  ],
+  "authors": [
+    "Tobias Talented Monkeys <tobias@talented-monkeys.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/monkey-tobi/foundation_additional",
+  "moduleType": [
+    "globals"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/monkey-tobi/foundation_additional.git"
+  }
+}
