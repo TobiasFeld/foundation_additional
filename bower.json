@@ -4,14 +4,14 @@
   "description": "Adding more Media Queries from Foundation Framework and some more utility classes",
   "main": [
     "_more_media_queries.scss",
-    "_utility_classes.scss",
+    "_utility_classes.scss"
   ],
   "keywords": [
     "foundation",
     "monkey-theme"
   ],
   "authors": [
-    "Tobias @ Talented Monkeys <tobias@talented-monkeys.com>"
+    "Tobias Talented Monkeys <tobias@talented-monkeys.com>"
   ],
   "license": "MIT"
 }
