@@ -1,0 +1,250 @@
+body{
+  //
+  // Display classes
+  .display-inline-block{display: inline-block}
+  .display-block{display: block}
+  .display-none{display: none}
+  .display-inherit{display: inherit}
+
+  //
+  // Position classes
+  .position-relative{position: relative}
+  .position-absolute{position: absolute}
+  .position-static{position: static}
+  .position-fixed{position: fixed}
+
+
+
+  // No Margin
+  .no-margin-top{margin-top: 0;}
+  .no-margin-right{margin-right: 0;}
+  .no-margin-bottom{margin-bottom: 0;}
+  .no-margin-left{margin-left: 0;}
+
+  // No Padding
+  .no-padding-top{padding-top: 0;}
+  .no-padding-right{padding-right: 0;}
+  .no-padding-bottom{padding-bottom: 0;}
+  .no-padding-left{padding-left: 0;}
+
+  //
+  // Height 100%
+  .height-100{height: 100%;}
+
+  //
+  // Round element (Border radius 50%)
+  .round{border-radius: 50%;}
+
+  // Vertical align fix
+  .vertical-align-wrapper{
+    position: absolute;
+    left: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    width: auto;
+  }
+
+  // classes for every viewport
+  @each $viewport, $viewport-title in ($mq-small,         "small" ),
+                                      ($mq-medium,        "medium" ),
+                                      ($mq-large,         "large" ),
+                                      ($mq-xlarge,        "xlarge" ),
+                                      ($mq-xxlarge,       "xxlarge" ),
+                                      ($mq-from-small,    "up-small" ),
+                                      ($mq-from-medium,   "up-medium" ),
+                                      ($mq-from-large,    "up-large" ),
+                                      ($mq-from-xlarge,   "up-xlarge" ),
+                                      ($mq-from-xxlarge,  "up-xxlarge" ),
+                                      ($mq-to-small,      "down-small" ),
+                                      ($mq-to-medium,     "down-medium" ),
+                                      ($mq-to-large,      "down-large" ),
+                                      ($mq-to-xlarge,     "down-xlarge" ),
+                                      ($mq-to-xxlarge,    "down-xxlarge" )
+  {
+    // Media Query for every viewport
+    @media #{$viewport}{
+
+      // Display classes
+      .#{$viewport-title}-display-inline-block{display: inline-block}
+      .#{$viewport-title}-display-block{display: block}
+      .#{$viewport-title}-display-none{display: none}
+      .#{$viewport-title}-display-inherit{display: inherit}
+
+      // Position classes
+      .#{$viewport-title}-position-relative{position: relative}
+      .#{$viewport-title}-position-absolute{position: absolute}
+      .#{$viewport-title}-position-static{position: static}
+      .#{$viewport-title}-position-fixed{position: fixed}
+
+      // Height 100%
+      .#{$viewport-title}-height-100{height: 100%;}
+
+      // No Margin
+      .#{$viewport-title}-no-margin-top{margin-top: 0;}
+      .#{$viewport-title}-no-margin-right{margin-right: 0;}
+      .#{$viewport-title}-no-margin-bottom{margin-bottom: 0;}
+      .#{$viewport-title}-no-margin-left{margin-left: 0;}
+
+      // No Padding
+      .#{$viewport-title}-no-padding-top{padding-top: 0;}
+      .#{$viewport-title}-no-padding-right{padding-right: 0;}
+      .#{$viewport-title}-no-padding-bottom{padding-bottom: 0;}
+      .#{$viewport-title}-no-padding-left{padding-left: 0;}
+
+      // Floatings
+      .#{$viewport-title}-left{float: left;}
+      .#{$viewport-title}-right{float: right;}
+      .#{$viewport-title}-none{float: none;}
+
+      // Round element (Border radius 50%)
+      .#{$viewport-title}-round{border-radius: 50%;}
+
+      // Vertical align fix
+      .#{$viewport-title}-vertical-align-wrapper{
+        position: absolute;
+        left: auto;
+        top: 50%;
+        transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+        -moz-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+      }
+    }
+  }
+}
+
+//
+// Margin & padding classes
+// Generated margins and paddings in defined sizes and factors for
+// every viewports of foundation grid classes
+//
+
+
+// Initial offset variables
+// -> $column-gutter is by default 20px
+$global-default-offset: $column-gutter*1.5;
+
+// Factor of every size step
+$offset-factor-3xs: 4;
+$offset-factor-xxs: 3;
+$offset-factor-xs:  2;
+$offset-factor-s:   1.5;
+$offset-factor-m:   1.5;
+$offset-factor-l:   2;
+$offset-factor-xl:  2.5;
+$offset-factor-xxl: 3;
+$offset-factor-3xl: 4;
+
+// Factor of every viewport increasment
+$viewport-factor-small: 1;
+$viewport-factor-medium: $viewport-factor-small;
+$viewport-factor-large: 1.333;
+$viewport-factor-xlarge: 1.35;
+$viewport-factor-xxlarge: $viewport-factor-xlarge;
+
+body{
+
+// Loop with every viewport and factor for every viewport
+@each $viewport, $factor in ($mq-small,    $viewport-factor-small ),
+                            ($mq-medium,   $viewport-factor-medium ),
+                            ($mq-large,    $viewport-factor-large ),
+                            ($mq-xlarge,   $viewport-factor-xlarge ),
+                            ($mq-from-xxlarge,  $viewport-factor-xxlarge )
+{
+    // Media Query for every viewport
+    @media #{$viewport}{
+
+      // Loop for margin and padding
+      @each $offset in margin, padding {
+
+        // Margin and padding selector
+        .#{$offset} {
+
+          // Loop for every margin/padding side
+          @each $side in top, right, bottom, left {
+
+            // General selector
+            &-#{$side} {
+              // Stylesheet for general offset
+              #{$offset}-#{$side}: ($global-default-offset * $factor);
+
+              // 3xs selector
+              &-3xs {
+                // Stylesheet for 3xs offset
+                #{$offset}-#{$side}: ($global-default-offset * $factor) / $offset-factor-3xs;
+              }
+
+              // xxs selector
+              &-xxs {
+                // Stylesheet for xxs offset
+                #{$offset}-#{$side}: ($global-default-offset * $factor) / $offset-factor-xxs;
+              }
+
+              // xs selector
+              &-xs {
+                // Stylesheet for xs offset
+                #{$offset}-#{$side}: ($global-default-offset * $factor) / $offset-factor-xs;
+              }
+
+              // s selector
+              &-s {
+                // Stylesheet for s offset
+                #{$offset}-#{$side}: ($global-default-offset * $factor) / $offset-factor-s;
+              }
+
+              // m selector
+              &-m {
+                // Stylesheet for m offset
+                #{$offset}-#{$side}: ($global-default-offset * $factor) * $offset-factor-m;
+              }
+
+              // l selector
+              &-l {
+                // Stylesheet for l offset
+                #{$offset}-#{$side}: ($global-default-offset * $factor) * $offset-factor-l;
+              }
+
+              // xl selector
+              &-xl {
+                // Stylesheet for xl offset
+                #{$offset}-#{$side}: ($global-default-offset * $factor) * $offset-factor-xl;
+              }
+
+              // xxl selector
+              &-xxl {
+                // Stylesheet for xxl offset
+                #{$offset}-#{$side}: ($global-default-offset * $factor) * $offset-factor-xxl;
+              }
+
+              // 3xl selector
+              &-3xl {
+                // Stylesheet for 3xl offset
+                #{$offset}-#{$side}: ($global-default-offset * $factor) * $offset-factor-3xl;
+              }
+
+              &-neg{
+                #{$offset}-#{$side}: -($global-default-offset * $factor);
+                &-3xs { #{$offset}-#{$side}: -($global-default-offset * $factor) / $offset-factor-3xs; }
+                &-xxs { #{$offset}-#{$side}: -($global-default-offset * $factor) / $offset-factor-xxs; }
+                &-xs { #{$offset}-#{$side}: -($global-default-offset * $factor) / $offset-factor-xs; }
+                &-s { #{$offset}-#{$side}: -($global-default-offset * $factor) / $offset-factor-s; }
+                &-m { #{$offset}-#{$side}: -($global-default-offset * $factor) * $offset-factor-m; }
+                &-l { #{$offset}-#{$side}: -($global-default-offset * $factor) * $offset-factor-l; }
+                &-xl { #{$offset}-#{$side}: -($global-default-offset * $factor) * $offset-factor-xl; }
+                &-xxl { #{$offset}-#{$side}: -($global-default-offset * $factor) * $offset-factor-xxl; }
+                &-3xl { #{$offset}-#{$side}: -($global-default-offset * $factor) * $offset-factor-3xl; }
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+}

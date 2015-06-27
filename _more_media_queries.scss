@@ -1,0 +1,109 @@
+// Function-variables
+$lower-bound-small: lower-bound($small-range);
+$upper-bound-small: upper-bound($small-range);
+$lower-bound-medium: lower-bound($medium-range);
+$upper-bound-medium: upper-bound($medium-range);
+$lower-bound-large: lower-bound($large-range);
+$upper-bound-large: upper-bound($large-range);
+$lower-bound-xlarge: lower-bound($xlarge-range);
+$upper-bound-xlarge: upper-bound($xlarge-range);
+$lower-bound-xxlarge: lower-bound($xxlarge-range);
+$upper-bound-xxlarge: upper-bound($xxlarge-range);
+
+//Foundation Grid -> Media Queries -> Ranges
+$mq-small:   "only screen and (min-width: #{$lower-bound-small})    and (max-width: #{$upper-bound-small})";
+$mq-medium:  "only screen and (min-width: #{$lower-bound-medium})   and (max-width: #{$upper-bound-medium})";
+$mq-large:   "only screen and (min-width: #{$lower-bound-large})    and (max-width: #{$upper-bound-large})";
+$mq-xlarge:  "only screen and (min-width: #{$lower-bound-xlarge})   and (max-width: #{$upper-bound-xlarge})";
+$mq-xxlarge: "only screen and (min-width: #{$lower-bound-xxlarge})  and (max-width: #{$upper-bound-xxlarge})";
+
+//Foundation Grid -> Media Queries -> Between-Ranges -> Between Viewports --> min small
+$mq-min-small--max-medium:  "only screen and (min-width: #{$lower-bound-small}) and (max-width: #{$upper-bound-small})";
+$mq-min-small--min-large:   "only screen and (min-width: #{$lower-bound-small}) and (max-width: #{$lower-bound-large})";
+$mq-min-small--max-large:   "only screen and (min-width: #{$lower-bound-small}) and (max-width: #{$upper-bound-large})";
+$mq-min-small--min-xlarge:  "only screen and (min-width: #{$lower-bound-small}) and (max-width: #{$lower-bound-xlarge})";
+$mq-min-small--max-xlarge:  "only screen and (min-width: #{$lower-bound-small}) and (max-width: #{$upper-bound-xlarge})";
+$mq-min-small--min-xxlarge: "only screen and (min-width: #{$lower-bound-small}) and (max-width: #{$lower-bound-xxlarge})";
+$mq-min-small--max-xxlarge: "only screen and (min-width: #{$lower-bound-small}) and (max-width: #{$upper-bound-xxlarge})";
+
+//Foundation Grid -> Media Queries -> Between-Ranges -> Between Viewports --> max small
+$mq-max-small--max-medium:  "only screen and (min-width: #{$upper-bound-small}) and (max-width: #{$upper-bound-small})";
+$mq-max-small--min-large:   "only screen and (min-width: #{$upper-bound-small}) and (max-width: #{$lower-bound-large})";
+$mq-max-small--max-large:   "only screen and (min-width: #{$upper-bound-small}) and (max-width: #{$upper-bound-large})";
+$mq-max-small--min-xlarge:  "only screen and (min-width: #{$upper-bound-small}) and (max-width: #{$lower-bound-xlarge})";
+$mq-max-small--max-xlarge:  "only screen and (min-width: #{$upper-bound-small}) and (max-width: #{$upper-bound-xlarge})";
+$mq-max-small--min-xxlarge: "only screen and (min-width: #{$upper-bound-small}) and (max-width: #{$lower-bound-xxlarge})";
+$mq-max-small--max-xxlarge: "only screen and (min-width: #{$upper-bound-small}) and (max-width: #{$upper-bound-xxlarge})";
+
+//Foundation Grid -> Media Queries -> Between-Ranges -> Between Viewports --> min medium
+$mq-min-medium--min-large:    "only screen and (min-width: #{$lower-bound-medium}) and (max-width: #{$lower-bound-large})";
+$mq-min-medium--max-large:    "only screen and (min-width: #{$lower-bound-medium}) and (max-width: #{$upper-bound-large})";
+$mq-min-medium--min-xlarge:   "only screen and (min-width: #{$lower-bound-medium}) and (max-width: #{$lower-bound-xlarge})";
+$mq-min-medium--max-xlarge:   "only screen and (min-width: #{$lower-bound-medium}) and (max-width: #{$upper-bound-xlarge})";
+$mq-min-medium--min-xxlarge:  "only screen and (min-width: #{$lower-bound-medium}) and (max-width: #{$lower-bound-xxlarge})";
+$mq-min-medium--max-xxlarge:  "only screen and (min-width: #{$lower-bound-medium}) and (max-width: #{$upper-bound-xxlarge})";
+
+//Foundation Grid -> Media Queries -> Between-Ranges -> Between Viewports --> max medium
+$mq-max-medium--max-large:    "only screen and (min-width: #{$upper-bound-small}) and (max-width: #{$upper-bound-large})";
+$mq-max-medium--min-xlarge:   "only screen and (min-width: #{$upper-bound-small}) and (max-width: #{$lower-bound-xlarge})";
+$mq-max-medium--max-xlarge:   "only screen and (min-width: #{$upper-bound-small}) and (max-width: #{$upper-bound-xlarge})";
+$mq-max-medium--min-xxlarge:  "only screen and (min-width: #{$upper-bound-small}) and (max-width: #{$lower-bound-xxlarge})";
+$mq-max-medium--max-xxlarge:  "only screen and (min-width: #{$upper-bound-small}) and (max-width: #{$upper-bound-xxlarge})";
+
+//Foundation Grid -> Media Queries -> Between-Ranges -> Between Viewports --> min large
+$mq-min-large--min-xlarge:  "only screen and (min-width: #{$lower-bound-large}) and (max-width: #{$lower-bound-xlarge})";
+$mq-min-large--max-xlarge:  "only screen and (min-width: #{$lower-bound-large}) and (max-width: #{$upper-bound-xlarge})";
+$mq-min-large--min-xxlarge: "only screen and (min-width: #{$lower-bound-large}) and (max-width: #{$lower-bound-xxlarge})";
+$mq-min-large--max-xxlarge: "only screen and (min-width: #{$lower-bound-large}) and (max-width: #{$upper-bound-xxlarge})";
+
+//Foundation Grid -> Media Queries -> Between-Ranges -> Between Viewports --> max large
+$mq-max-large--max-xlarge:  "only screen and (min-width: #{$upper-bound-large}) and (max-width: #{$upper-bound-xlarge})";
+$mq-max-large--min-xxlarge: "only screen and (min-width: #{$upper-bound-large}) and (max-width: #{$lower-bound-xxlarge})";
+$mq-max-large--max-xxlarge: "only screen and (min-width: #{$upper-bound-large}) and (max-width: #{$upper-bound-xxlarge})";
+
+//Foundation Grid -> Media Queries -> Between-Ranges -> Between Viewports --> min xlarge
+$mq-min-xlarge--min-xxlarge: "only screen and (min-width: #{$lower-bound-xlarge}) and (max-width: #{$lower-bound-xxlarge})";
+$mq-min-xlarge--max-xxlarge: "only screen and (min-width: #{$lower-bound-xlarge}) and (max-width: #{$upper-bound-xxlarge})";
+
+//Foundation Grid -> Media Queries -> Between-Ranges -> Between Viewports --> min xlarge
+$mq-max-xlarge--max-xxlarge: "only screen and (min-width: #{$upper-bound-xlarge}) and (max-width: #{$upper-bound-xxlarge})";
+
+//Foundation Grid -> Media Queries -> From min viewports to open end
+$mq-from-min-small:   "only screen and (min-width: #{$lower-bound-small})";
+$mq-from-min-medium:  "only screen and (min-width: #{$lower-bound-medium})";
+$mq-from-min-large:   "only screen and (min-width: #{$lower-bound-large})";
+$mq-from-min-xlarge:  "only screen and (min-width: #{$lower-bound-xlarge})";
+$mq-from-min-xxlarge: "only screen and (min-width: #{$lower-bound-xxlarge})";
+// -> alternative short version
+$mq-from-small:   "only screen and (min-width: #{$lower-bound-small})";
+$mq-from-medium:  "only screen and (min-width: #{$lower-bound-medium})";
+$mq-from-large:   "only screen and (min-width: #{$lower-bound-large})";
+$mq-from-xlarge:  "only screen and (min-width: #{$lower-bound-xlarge})";
+$mq-from-xxlarge: "only screen and (min-width: #{$lower-bound-xxlarge})";
+
+//Foundation Grid -> Media Queries -> From max viewports to open end
+$mq-from-max-small:   "only screen and (min-width: #{$upper-bound-small})";
+$mq-from-max-medium:  "only screen and (min-width: #{$upper-bound-small})";
+$mq-from-max-large:   "only screen and (min-width: #{$upper-bound-large})";
+$mq-from-max-xlarge:  "only screen and (min-width: #{$upper-bound-xlarge})";
+$mq-from-max-xxlarge: "only screen and (min-width: #{$upper-bound-xxlarge})";
+
+//Foundation Grid -> Media Queries -> From 0 to min $viewport
+$mq-to-min-small:   "only screen and (max-width: #{$lower-bound-small})";
+$mq-to-min-medium:  "only screen and (max-width: #{$lower-bound-medium})";
+$mq-to-min-large:   "only screen and (max-width: #{$lower-bound-large})";
+$mq-to-min-xlarge:  "only screen and (max-width: #{$lower-bound-xlarge})";
+$mq-to-min-xxlarge: "only screen and (max-width: #{$lower-bound-xxlarge})";
+
+//Foundation Grid -> Media Queries -> From 0 to max $viewport
+$mq-to-max-small:   "only screen and (max-width: #{$upper-bound-small})";
+$mq-to-max-medium:  "only screen and (max-width: #{$upper-bound-small})";
+$mq-to-max-large:   "only screen and (max-width: #{$upper-bound-large})";
+$mq-to-max-xlarge:  "only screen and (max-width: #{$upper-bound-xlarge})";
+$mq-to-max-xxlarge: "only screen and (max-width: #{$upper-bound-xxlarge})";
+// -> alternative short version
+$mq-to-small:   "only screen and (max-width: #{$upper-bound-small})";
+$mq-to-medium:  "only screen and (max-width: #{$upper-bound-small})";
+$mq-to-large:   "only screen and (max-width: #{$upper-bound-large})";
+$mq-to-xlarge:  "only screen and (max-width: #{$upper-bound-xlarge})";
+$mq-to-xxlarge: "only screen and (max-width: #{$upper-bound-xxlarge})";
